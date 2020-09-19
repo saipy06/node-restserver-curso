@@ -1,0 +1,26 @@
+
+
+mongo
+
+
+usuario: ysapy
+contrasenia: kqYjgqTez8iHRSqW
+
+
+
+mongodb+srv://ysapy:kqYjgqTez8iHRSqW@cluster0.ktbxh.mongodb.net/test
+
+
+
+
+
+
+
+
+comandos node
+
+npm update       (actualiza todas las librerias del proyecto)
+
+npm uninstall decrypt              // desinstala un paquete
+
+npm install decrypt					// instala el paquete decrypte
