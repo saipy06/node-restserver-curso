@@ -3,12 +3,15 @@ const express = require('express')
     // Using Node.js `require()`
 const mongoose = require('mongoose');
 //const mongoClient = require('mongodb').MongoClient;
+mongoose.set('useFindAndModify', false);
 
 const path = require('path');
 
 const app = express();
 
 const bodyParser = require('body-parser')
+
+mongoose.set('useFindAndModify', false);
 
 
 
