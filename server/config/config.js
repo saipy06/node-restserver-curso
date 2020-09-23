@@ -55,3 +55,10 @@ heroku config:get nombre				// trae el contenido de la variable
 
 //urlDB = 'mongodb+srv://ysapy:kqYjgqTez8iHRSqW@cluster0.ktbxh.mongodb.net/cafe?retryWrites=true&w=majority';
 process.env.URLDB = urlDB;
+
+
+//================================
+//  Google Client ID
+//===============================
+
+process.env.CLIENT_ID = process.env.CLIENT_ID || '988119387719-uttdp11uq272anbr8sslvvno2uilng6r.apps.googleusercontent.com';
