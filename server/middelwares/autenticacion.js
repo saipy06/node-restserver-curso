@@ -55,9 +55,33 @@ let verificaAdmin_Role = (req, res, next) => {
         });
     }
 
+}
 
 
+/************************+
+ *     Verificar Token para Imagen
+ *
+ *************************/
 
+let verificaTokenImg = (req, res, next) => {
+
+    let token = req.query.token;
+
+    jwt.verify(token, process.env.SEED, (err, decoded) => {
+
+        if (err) {
+            return res.status(401).json({
+                ok: false,
+                err: {
+                    messagge: 'Token Inválido'
+                },
+            });
+        }
+        req.usuario = decoded.usuario;
+        next(); //si no se ejecuta esto no muestra el resto del get, puto o lo que llame al middelwares
+
+
+    })
 
 }
 
@@ -66,7 +90,9 @@ let verificaAdmin_Role = (req, res, next) => {
 
 
 
+
 module.exports = {
     verificaToken,
-    verificaAdmin_Role
+    verificaAdmin_Role,
+    verificaTokenImg
 }
